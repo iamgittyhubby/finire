@@ -294,6 +294,7 @@ body {
   box-shadow: 0 0 0 1px var(--border);
   display: flex;
   flex-direction: column;
+  overflow: visible;
 }
 
 .header {
@@ -304,9 +305,14 @@ body {
   position: sticky;
   top: 0;
   background: white;
-  padding: 16px 0;
-  margin-top: -16px;
+  padding-top: 48px;
+  padding-bottom: 16px;
   z-index: 50;
+  margin-left: -64px;
+  margin-right: -64px;
+  padding-left: 64px;
+  padding-right: 64px;
+  margin-top: -48px;
 }
 
 .current-date {
@@ -385,11 +391,14 @@ body {
 .progress-container {
   margin-bottom: 32px;
   position: sticky;
-  top: 64px;
+  top: 80px;
   background: white;
-  padding: 16px 0;
-  margin-top: -16px;
+  padding-bottom: 16px;
   z-index: 49;
+  margin-left: -64px;
+  margin-right: -64px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 .progress-bar {
