@@ -420,7 +420,8 @@ body {
   line-height: 1.9;
   color: var(--text);
   background: transparent;
-  min-height: 450px;
+  height: 500px;
+  overflow-y: auto;
 }
 
 .writing-area::placeholder {
