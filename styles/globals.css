@@ -156,7 +156,7 @@ body {
 
 .day-box:hover {
   transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 .day-box.sealed {
@@ -301,6 +301,12 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 16px 0;
+  margin-top: -16px;
+  z-index: 50;
 }
 
 .current-date {
@@ -378,6 +384,12 @@ body {
 /* Progress Bar */
 .progress-container {
   margin-bottom: 32px;
+  position: sticky;
+  top: 64px;
+  background: white;
+  padding: 16px 0;
+  margin-top: -16px;
+  z-index: 49;
 }
 
 .progress-bar {
