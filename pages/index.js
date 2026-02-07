@@ -514,6 +514,9 @@ export default function Home() {
                 onKeyDown={handleKeyDown}
                 placeholder="Start writing. 300 words to move forward..."
                 disabled={viewingDay?.sealed || !viewingDay?.isToday}
+                spellCheck="false"
+                autoCorrect="off"
+                autoCapitalize="off"
               />
 
               <div className={`nav-arrows ${viewingDay?.sealed ? 'visible' : ''}`}>
