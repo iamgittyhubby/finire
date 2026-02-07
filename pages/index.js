@@ -468,43 +468,45 @@ export default function Home() {
         {/* Main Writing Area */}
         <div className="main-wrapper">
           <main className="main">
-            <header className="header">
-              <div className="current-date">
-                {viewingDay?.isToday ? `Today — Day ${viewingDay.dayNumber}` : `Day ${viewingDay?.dayNumber}`}
-              </div>
-              <div className="status-area">
-                {viewingDay?.sealed ? (
-                  <div className="sealed-badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                    Sealed · {viewingDay.wordCount} words
-                  </div>
-                ) : (
-                  <>
-                    <div className={`seal-container ${wordCount >= 300 && viewingDay?.isToday ? 'visible' : ''}`}>
-                      <button className="seal-button" onClick={handleSeal}>
-                        Seal This
-                      </button>
-                    </div>
-                    <div className="word-count">
-                      <span>{wordCount}</span> / 300 words
-                    </div>
-                  </>
-                )}
-              </div>
-            </header>
-
-            {!viewingDay?.sealed && (
-              <div className="progress-container">
-                <div className="progress-bar">
-                  <div
-                    className={`progress-fill ${wordCount >= 300 ? 'complete' : ''}`}
-                    style={{ width: `${progress}%` }}
-                  />
+            <div className="sticky-header-wrapper">
+              <header className="header">
+                <div className="current-date">
+                  {viewingDay?.isToday ? `Today — Day ${viewingDay.dayNumber}` : `Day ${viewingDay?.dayNumber}`}
                 </div>
-              </div>
-            )}
+                <div className="status-area">
+                  {viewingDay?.sealed ? (
+                    <div className="sealed-badge">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                      Sealed · {viewingDay.wordCount} words
+                    </div>
+                  ) : (
+                    <>
+                      <div className={`seal-container ${wordCount >= 300 && viewingDay?.isToday ? 'visible' : ''}`}>
+                        <button className="seal-button" onClick={handleSeal}>
+                          Seal This
+                        </button>
+                      </div>
+                      <div className="word-count">
+                        <span>{wordCount}</span> / 300 words
+                      </div>
+                    </>
+                  )}
+                </div>
+              </header>
+
+              {!viewingDay?.sealed && (
+                <div className="progress-container">
+                  <div className="progress-bar">
+                    <div
+                      className={`progress-fill ${wordCount >= 300 ? 'complete' : ''}`}
+                      style={{ width: `${progress}%` }}
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
 
             <div className="writing-container">
               <textarea

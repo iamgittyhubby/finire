@@ -304,11 +304,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
-  position: sticky;
-  top: 0;
-  background: white;
-  padding-bottom: 16px;
-  z-index: 50;
 }
 
 .current-date {
@@ -386,11 +381,6 @@ body {
 /* Progress Bar */
 .progress-container {
   margin-bottom: 32px;
-  position: sticky;
-  top: 64px;
-  background: white;
-  padding-bottom: 16px;
-  z-index: 49;
 }
 
 .progress-bar {
@@ -655,4 +645,12 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 12px;
+}
+
+.sticky-header-wrapper {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 50;
+  padding-bottom: 16px;
 }
