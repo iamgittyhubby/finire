@@ -619,3 +619,27 @@ body {
     flex-shrink: 0;
   }
 }
+
+/* Reminder clock button */
+.reminder-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  opacity: 0.8;
+}
+
+.reminder-button:hover {
+  opacity: 1;
+}
+
+.modal-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
